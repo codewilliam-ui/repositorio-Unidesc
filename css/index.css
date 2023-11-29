@@ -1,0 +1,539 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2? family= Fórum & display=swap');
+
+
+.container {
+ top: -12.5px;
+ text-align: center;
+ /* Alinha o conteúdo ao centro horizontalmente */
+ position: relative;
+ /* Define a posição do contêiner como relativa para alinhar o texto overlay */
+}
+
+.container img {
+ height: auto;
+ /* Define altura fixa para desktops com largura mínima de 768 pixels */
+ display: block;
+ /* Define a imagem como bloco para alinhar corretamente */
+ top: -50px;
+ /* Remove a margem padrão da imagem */
+ margin-bottom: 50px;
+ /* Adiciona margem inferior para espaçamento */
+ width: 100vw;
+ /* Certifica de que a imagem ocupe todo o espaço do contêiner */
+ height: auto;
+ /* Mantém a proporção da imagem */
+ z-index: 0;
+}
+
+.woman .girl {
+ transform: scaleX(-1);
+ position: absolute;
+ z-index: 11;
+ height: auto;
+
+}
+
+.woman {
+ z-index: 10;
+ display: flex;
+
+}
+
+.woman .frm {
+ position: relative;
+
+}
+
+/* Estilos específicos para desktop (altura fixa) usando uma media query */
+@media (max-width: 720px) {
+ .container img {
+  height: 330px;
+  /* Define altura fixa para desktops com largura mínima de 768 pixels */
+  width: 100%;
+
+
+ }
+
+ .text-cont {
+  /* Texto sobreposto na imagem (Index) */
+  text-align: right;
+  justify-content: right;
+  position: absolute;
+  /* Define a posição do texto como absoluta para posicioná-lo sobre a imagem */
+  top: 50%;
+  /* Posiciona o texto verticalmente no meio da imagem */
+  right: -85vw;
+  left: 0%;
+  /* Posiciona o texto horizontalmente no meio da imagem */
+  transform: translate(-50%, -50%);
+  /* Centraliza o texto exatamente no meio da imagem */
+  background-color: rgba(255, 255, 255, 0);
+  /* Fundo transparente para melhor legibilidade do texto */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* Fonte do texto */
+  padding: 0px;
+  /* Espaçamento interno do texto para melhor legibilidade */
+  text-shadow: 1px 1px 2px #083460;
+ }
+
+ .woman img {
+  display: none;
+ }
+
+ .pr {
+  margin-inline: 20px;
+  align-items: center;
+  text-align: left;
+  font: normal 17px 'Times New Roman', serif;
+  margin: 15px 40px 70px 40px;
+  padding: auto;
+  line-height: 1.5em;
+  text-indent: 1.5em;
+ }
+
+ .text-cont strong {
+  color: white;
+  font-size: 20px;
+  text-shadow: 0;
+  /*Sombra do texto*/
+  line-height: 1.5em;
+ }
+
+ .text-cont {
+  font-size: 20px;
+  color: #66FFCC;
+  /* Cor do texto */
+  line-height: 1.5em;
+ }
+
+ .sub {
+  color: white;
+  font-size: 16px;
+  line-height: 1.5em;
+ }
+
+ .container_span_img {
+  display: none !important;
+ }
+
+ .rodapé {
+  display: block;
+ }
+}
+
+@media (min-width: 720px) and (max-width: 1279px) {
+ .container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+ }
+
+ .text-cont {
+  /* Texto sobreposto na imagem (Index) */
+  text-align: right;
+  justify-content: right;
+  position: absolute;
+  /* Define a posição do texto como absoluta para posicioná-lo sobre a imagem */
+  top: 40%;
+  /* Posiciona o texto verticalmente no meio da imagem */
+  right: -85vw;
+  left: 0%;
+  /* Posiciona o texto horizontalmente no meio da imagem */
+  transform: translate(-50%, -50%);
+  /* Centraliza o texto exatamente no meio da imagem */
+  background-color: rgba(255, 255, 255, 0);
+  /* Fundo transparente para melhor legibilidade do texto */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* Fonte do texto */
+  padding: 0px;
+  /* Espaçamento interno do texto para melhor legibilidade */
+  text-shadow: 1px 1px 2px #083460;
+ }
+
+ .pr {
+
+  margin-inline: 20px;
+  align-items: center;
+  text-align: left;
+  font: normal 30px 'Times New Roman', serif;
+  padding: 0px 55px 0 70px;
+  top: -20px;
+  margin: 0;
+  line-height: 1.5em;
+  text-indent: 1.5em;
+ }
+
+ .text-cont p {
+  margin: 0 0 10px;
+ }
+
+ .text-cont strong {
+  color: white;
+  font-size: 30px;
+  text-shadow: 0;
+  /*Sombra do texto*/
+  line-height: 1.5em;
+ }
+
+ .text-cont {
+  font-size: 30px;
+  color: #66FFCC;
+  /* Cor do texto */
+  line-height: 1.5em;
+ }
+
+ .sub {
+  color: white;
+  font-size: 20px;
+  line-height: 1.5em;
+ }
+
+ .woman .girl {
+  display: inline;
+  height: 430px;
+  width: auto;
+ }
+
+ .woman {
+  height: 430px;
+ }
+
+ .frm {
+  height: 332px;
+  width: 300px;
+  top: 100px;
+ }
+
+ .card0 {
+  display: flex;
+  justify-content: center;
+ }
+
+ .card1 {
+  width: 40vw;
+
+ }
+}
+
+@media (min-width: 720px) and (max-width: 930px) {
+ .pr {
+  padding: 0 40px 0 80px;
+  font-size: 27px;
+ }
+
+}
+
+@media (min-width: 1280px) {
+ .container {
+  height: 720px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+ }
+
+ .text-cont {
+  /* Texto sobreposto na imagem (Index) */
+  text-align: right;
+  justify-content: right;
+  position: absolute;
+  /* Define a posição do texto como absoluta para posicioná-lo sobre a imagem */
+  top: 50%;
+  /* Posiciona o texto verticalmente no meio da imagem */
+  right: -85vw;
+  left: 0%;
+  /* Posiciona o texto horizontalmente no meio da imagem */
+  transform: translate(-50%, -50%);
+  /* Centraliza o texto exatamente no meio da imagem */
+  background-color: rgba(255, 255, 255, 0);
+  /* Fundo transparente para melhor legibilidade do texto */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* Fonte do texto */
+  padding: 0px;
+  /* Espaçamento interno do texto para melhor legibilidade */
+  text-shadow: 1px 1px 2px #083460;
+ }
+
+ .pr {
+  margin-inline: 20px;
+  align-items: center;
+  text-align: left;
+  font: normal 40px 'Times New Roman', serif;
+  margin-bottom: 88px;
+  padding: 0px 55px 0 40px;
+  line-height: 1.5em;
+  text-indent: 1.5em;
+ }
+
+ .text-cont strong {
+  color: white;
+  font-size: 45px;
+  text-shadow: 0;
+  /*Sombra do texto*/
+  line-height: 1.5em;
+ }
+
+ .text-cont {
+  font-size: 45px;
+  color: #66FFCC;
+  /* Cor do texto */
+  line-height: 1.5em;
+ }
+
+ .sub {
+  color: white;
+  font-size: 30px;
+  line-height: 1.5em;
+ }
+
+ .woman {
+  height: 630px;
+ }
+
+ .woman .girl {
+  height: 630px;
+  width: 500px;
+ }
+
+ .frm {
+  height: 400px;
+  width: 500px;
+  top: 230px;
+ }
+
+ .card0 {
+  display: flex;
+  justify-content: center;
+  transition: top 3s ease;
+ }
+
+ .card1 {
+  width: 40vw;
+
+ }
+
+}
+
+
+.selection {
+ font: bold 24px 'Roboto';
+ text-align: center;
+ color: white;
+ padding: 10px;
+ margin: 30px;
+}
+
+.splide {
+ display: block;
+ background-color: #0B1230;
+ padding-bottom: 15px;
+ height: 750px;
+ z-index: 5;
+ position: sticky;
+}
+
+.splide__pagination {
+ padding-bottom: 40px;
+ margin: 0px;
+ bottom: -4px;
+}
+
+.splide__arrow {
+ background-color: rgba(16, 36, 51, 0.4);
+
+}
+
+/* Adicione este estilo para a classe slide-content */
+.slide-content {
+ position: relative;
+}
+
+/* Adicione este estilo para a classe slide-title */
+.slide-title, .slide-title1 {
+ position: absolute;
+ top: 450px;
+ left: 0;
+ right: 0;
+ color: white;
+ padding: 10px;
+ text-align: center;
+ font-size: 50px;
+ font-weight: 600;
+ letter-spacing: 2.5px;
+}
+
+@media (max-width: 720px) {
+ .slide-title {
+  top: 400px;
+ }
+ 
+
+  .slide-title1{
+font-size: 43px;
+   top: 407px;
+  }
+ 
+
+ .splide {
+  height: 680px;
+ }
+}
+
+.recently p {
+ text-align: center;
+ font: bold 24px 'Roboto';
+ color: #061833;
+ margin: 0;
+ padding: 60px 30px;
+ white-space: nowrap;
+ z-index: 3;
+ display: block;
+}
+
+.card1 {
+ background-color: white;
+ margin: 20px;
+ width: 90vw;
+ box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.crs,
+.theme {
+ display: block;
+ font: lighter 16px 'Roboto';
+ line-height: 1.5em;
+ color: slategrey;
+}
+
+.crs {
+ padding: 15px 10px 10px 10px;
+}
+
+.theme {
+ font: 500 17px 'Roboto';
+ color: #384143;
+ padding: 0 10px 10px 10px;
+}
+.brn a{
+  text-decoration: none;
+  color: white;
+}
+.brn {
+ background-color: #FFA903;
+ font: 600 13px 'Roboto';
+ border: 0;
+ margin: 5px 10px 10px 10px;
+ padding: 0px 20px;
+ align-items: center;
+ cursor: pointer;
+}
+
+.brn:hover {
+ background: white;
+ border: 1px solid #FFA903;
+ transition: 0.3s;
+}
+
+.ctn {
+ display: flex;
+ padding: 0px 20px 0px 0px;
+ justify-content: space-between;
+}
+
+.ctn p {
+ font: lighter 14px 'Roboto';
+}
+
+.model {
+ margin: 90px 20px;
+ padding: 0px;
+ text-align: center;
+ display: flex;
+ justify-content: center;
+}
+
+.txt1 {
+ font: 500 24px 'Roboto';
+ color: #083460;
+ display: block;
+ margin-bottom: 40px;
+}
+
+.txt2 {
+ font: 400 18px 'Roboto';
+ color: #E03337;
+ display: block;
+}
+
+.model button {
+ background-color: #004B8F;
+ color: white;
+ margin-top: 40px;
+ border-radius: 30px;
+ border: 0;
+ padding: 15px 20px;
+ cursor: pointer;
+}
+
+.model button:hover {
+ background-color: #0B9BD7;
+ border: 1px solid #0B9BD7;
+ color: white;
+ transition: 0.3s;
+ font-size: 14px;
+}
+
+.container_span {
+ text-align: center;
+ padding: 100px 20px 0 0;
+}
+.brn a:hover{
+  color: #FFA903;
+  font: normal 15px;
+}
+@media (max-width:720px) {
+ .container_span {
+  padding: 0;
+ }
+}
+
+.container_span_img {
+ display: flex;
+ height: 400px;
+}
+
+.container_span_img .bck_study {
+ position: relative;
+ width: 400px;
+ top: 50px;
+ box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container_span_img .study {
+ width: 380px;
+ height: 450px;
+ position: absolute;
+ margin-left: 7px;
+}
+
+.scroll-top-left {
+ left: 90%;
+}
+
+#scroll-top {
+ bottom: 74px;
+ position: fixed;
+ width: 40px;
+ height: 40px;
+ top: 92vh;
+ line-height: 40px;
+ background-color: rgba(0, 0, 0, 0.5);
+ color: white;
+ cursor: pointer;
+ border-radius: 2px;
+ text-align: center;
+ z-index: 100;
+ box-sizing: content-box;
+}

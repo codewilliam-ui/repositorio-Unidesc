@@ -1,0 +1,313 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+* {
+ text-decoration: none;
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Estilos para o contêiner (Page of SIS) */
+.container {
+ text-align: center;
+ /* Alinha o conteúdo ao centro horizontalmente */
+ position: relative;
+ /* Define a posição do contêiner como relativa para alinhar o texto overlay */
+ overflow: hidden;
+ /* Esconde qualquer conteúdo que ultrapasse os limites do contêiner */
+ width: 100%;
+ top: -13PX;
+ z-index: 0;
+}
+
+.text-overlay a {
+ color: white;
+}
+
+/* Estilos para a imagem */
+.container img {
+ display: block;
+ /* Define a imagem como bloco para alinhar corretamente */
+ margin: 0;
+ /* Remove a margem padrão da imagem */
+ padding: 0;
+ margin-bottom: 20px;
+ /* Adiciona margem inferior para espaçamento */
+ height: 330px;
+ /* Mantém a proporção da imagem */
+ width: 100%;
+ /* Certifica de que a imagem ocupe todo o espaço do contêiner */
+
+}
+
+/* Estilos específicos para desktop (altura fixa) usando uma media query */
+@media (max-width: 720px) {
+ .container img {
+  width: 720px;
+  height: 260px;
+  /* Define altura fixa para desktops com largura mínima de 768 pixels */
+  margin: 0;
+  padding: 0;
+ }
+}
+
+
+.text-overlay {
+ /* Texto sobreposto na imagem (Page of SIS)*/
+ position: absolute;
+ /* Define a posição do texto como absoluta para posicioná-lo sobre a imagem */
+ top: 45%;
+ /* Posiciona o texto verticalmente no meio da imagem */
+ left: 50%;
+ /* Posiciona o texto horizontalmente no meio da imagem */
+ transform: translate(-50%, -50%);
+ /* Centraliza o texto exatamente no meio da imagem */
+ background-color: rgba(255, 255, 255, 0);
+ /* Fundo transparente para melhor legibilidade do texto */
+ font: 500 45px system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+ /* Fonte do texto */
+ padding: 20px;
+ /* Espaçamento interno do texto para melhor legibilidade */
+ white-space: nowrap;
+
+}
+
+@media (max-width:720px) {
+ .text-overlay {
+  font-size: 20pt;
+  font-weight: bold;
+  white-space: nowrap;
+  top: 43%;
+ }
+}
+
+strong {
+ /* (All pages) */
+ font-weight: 800;
+ font-size: 20px;
+}
+
+@media (max-width:720px) {
+ strong {
+  font-weight: 800;
+  font-size: 17px;
+ }
+
+ hr {
+  margin-inline: 20px;
+  /* Adiciona uma margem nas laterais do elemento <hr> */
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
+}
+
+
+@media (max-width: 720px) {
+
+ .table2 {
+  padding: 10px;
+  margin-top: 30px;
+  margin-inline: 0px;
+  font-size: 17px;
+  margin-bottom: 0;
+ }
+
+ .tb {
+  width: 100%;
+  justify-content: left;
+  background-color: white;
+
+ }
+
+ .table2 .td {
+  padding: 20px;
+ }
+ .table2 strong{
+    text-align: left;
+ }
+ .td{
+    text-align: justify;
+ }
+ th{
+  padding: 20px;
+ }
+
+}
+
+@media (min-width: 720px) {
+
+
+ .table2 {
+  margin-top: 30px;
+  margin-inline: 60px;
+  font-size: 20px;
+ }
+
+ .tb {
+  border-collapse: collapse;
+  width: 100%;
+  justify-content: space-between;
+  background-color: white;
+ }
+
+
+ .table2 td {
+  padding: 20px;
+ }
+ .table2 strong{
+    text-align: left;
+ }
+ .td{
+    text-align: justify;
+ }
+ th{
+  padding: 20px;
+ }
+
+ .table2 table td .table2 table tr:nth-child(even) {
+  background: #f8f8f8;
+ }
+}
+th{
+  border-right: 1px solid #f1f1f1;
+  border-left: 1px solid #f1f1f1;
+}
+.table2, table{
+ line-height: 1.5em;
+}
+ .resumo, .abstract {
+  text-indent: 1.5em;
+ }
+ .titulo{
+  text-align: left;
+ }
+
+.banca {
+ /* Banca Examinadora */
+ font-size: 40px;
+ font-weight: 500;
+ text-align: center;
+ margin-top: 40px;
+ margin-bottom: 70px;
+}
+
+@media (max-width: 720px) {
+ .banca {
+  font-size: 30px;
+  margin-bottom: 40px;
+ }
+}
+
+@media (min-width: 720px) {
+ .image {
+  width: auto;
+  justify-content: space-around;
+  padding: 0px 40px;
+ }
+}
+
+.image {
+ display: flex;
+ justify-content: space-around;
+ padding: 0px 20px;
+}
+
+.documents {
+ color: white;
+ align-items: center;
+ background-color: #083460;
+ padding: 2px;
+ border-radius: 13px;
+ margin-top: 50px;
+ margin-bottom: 50px;
+}
+
+ .documents h2 {
+  font-size: 23px;
+  font-weight: 400;
+  text-align: center;
+ }
+
+ .documents {
+  margin-inline: 60px;
+ }
+
+@media (max-width:720px) {
+ .documents {
+  align-items: center;
+  margin-inline: 20px;
+ }
+
+ .documents h2 {
+  font-size: 17px;
+  font-weight: normal;
+ }
+}
+.pdf{
+ padding: 0 60px;
+ margin: 0;
+ font-size: 20px;
+ text-align: justify;
+ line-height: 1.5em;
+}
+
+.pdf a {
+ color: #014990;
+}
+
+@media (max-width: 720px) {
+ .pdf {
+  padding: 0 20px;
+  font-size: 16px;
+ }
+}
+
+footer {
+ margin-top: 50px;
+ background-color: #014990;
+ text-align: center;
+ padding: 15px 0;
+ /* Espaçamento interno no topo e na parte inferior do rodapé */
+}
+
+.footer .lg {
+ height: 50px;
+ width: 50px;
+}
+
+/*=========================================================================================================================================================================================*/
+
+
+@media (min-width: 720px) {
+ 
+ table {
+  border-collapse: collapse;
+  width: 100%;
+  justify-content: space-between;
+  background-color: white;
+ }
+}
+
+@media (max-width: 720px) {
+
+ table thead {
+  padding: 20px;
+ }
+
+table td {
+  text-align: center;
+  padding: 15px;
+ }
+}
+
+table thead {
+  color: #ffffff;
+  background: #2f4961;
+}
+
+table td {
+  border-right: 1px solid #f1f1f1;
+}   
+table tr:nth-child(even) {
+  background: #f8f8f8;
+}

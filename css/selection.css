@@ -1,0 +1,302 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+* {
+ text-decoration: none;
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* Estilos para o contêiner (Page of SIS) */
+.container {
+ text-align: center;
+ /* Alinha o conteúdo ao centro horizontalmente */
+ position: relative;
+ /* Define a posição do contêiner como relativa para alinhar o texto overlay */
+ overflow: hidden;
+ /* Esconde qualquer conteúdo que ultrapasse os limites do contêiner */
+ width: 100%;
+ top: -13PX;
+ z-index: 0;
+}
+
+.text-overlay a {
+ color: white;
+}
+
+/* Estilos para a imagem */
+.container img {
+ display: block;
+ /* Define a imagem como bloco para alinhar corretamente */
+ margin: 0;
+ /* Remove a margem padrão da imagem */
+ padding: 0;
+ margin-bottom: 20px;
+ /* Adiciona margem inferior para espaçamento */
+ height: 330px;
+ /* Mantém a proporção da imagem */
+ width: 100%;
+ /* Certifica de que a imagem ocupe todo o espaço do contêiner */
+
+}
+
+/* Estilos específicos para desktop (altura fixa) usando uma media query */
+@media (max-width: 720px) {
+ .container img {
+  width: 720px;
+  height: 260px;
+  /* Define altura fixa para desktops com largura mínima de 768 pixels */
+  margin: 0;
+  padding: 0;
+ }
+}
+
+
+.text-overlay {
+ /* Texto sobreposto na imagem (Page of SIS)*/
+ position: absolute;
+ /* Define a posição do texto como absoluta para posicioná-lo sobre a imagem */
+ top: 45%;
+ /* Posiciona o texto verticalmente no meio da imagem */
+ left: 50%;
+ /* Posiciona o texto horizontalmente no meio da imagem */
+ transform: translate(-50%, -50%);
+ /* Centraliza o texto exatamente no meio da imagem */
+ background-color: rgba(255, 255, 255, 0);
+ /* Fundo transparente para melhor legibilidade do texto */
+ font: 500 45px system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+ /* Fonte do texto */
+ padding: 20px;
+ /* Espaçamento interno do texto para melhor legibilidade */
+ white-space: nowrap;
+
+}
+
+@media (max-width:720px) {
+ .text-overlay {
+  font-size: 20pt;
+  font-weight: bold;
+  white-space: nowrap;
+  top: 43%;
+ }
+}
+
+strong {
+ /* (All pages) */
+ font-weight: 800;
+ font-size: 20px;
+}
+
+@media (max-width:720px) {
+ strong {
+  font-weight: 800;
+  font-size: 17px;
+ }
+}
+
+/*=========================================================================================================================================================================================*/
+
+
+.wrapper {
+ width: 100%;
+ font-family: 'Roboto', sans-serif;
+ text-decoration: none;
+}
+
+.wrapper .search_box {
+ width: auto;
+ margin-bottom: 20px;
+ border-radius: 5px;
+ height: 65px;
+ display: flex;
+ padding: 10px;
+ box-shadow: 0 8px 6px -10px #b3c6ff;
+}
+
+.wrapper .search_box .dropdown {
+ width: 150px;
+ border-right: 2px solid #dde2f1;
+ color: #9fa3b1;
+ position: relative;
+ cursor: pointer;
+}
+
+.wrapper .search_box .dropdown .default_option {
+ text-transform: uppercase;
+ padding: 13px 15px;
+ font-size: 14px;
+}
+
+.wrapper .search_box .dropdown ul {
+ position: absolute;
+ top: 70px;
+ left: -10px;
+ background: #fff;
+ width: 150px;
+ border-radius: 5px;
+ padding: 20px;
+ display: none;
+ box-shadow: 8px 8px 6px -10px #b3c6ff;
+}
+
+.wrapper .search_box .dropdown ul:hover {
+ display: inline;
+
+}
+
+.wrapper .search_box .dropdown ul.active {
+ display: block;
+ list-style: none;
+}
+
+.wrapper .search_box .dropdown ul li {
+ padding-bottom: 20px;
+}
+
+.wrapper .search_box .dropdown ul li:last-child {
+ padding-bottom: 0;
+}
+
+.wrapper .search_box .dropdown ul li:hover {
+ color: #6f768d;
+}
+
+.wrapper .search_box .dropdown:before {
+ content: "";
+ position: absolute;
+ top: 18px;
+ right: 20px;
+ border: 8px solid;
+ border-color: #5078ef transparent transparent transparent;
+}
+
+.wrapper .search_box .search_field {
+ width: 100%;
+ height: 100%;
+ position: relative;
+ display: flex;
+}
+
+@media (min-width: 720px) {
+ .form-control {
+  height: 25px;
+  color: black;
+  font-size: 20px;
+  border-radius: 0px;
+  width: 100%;
+  margin: 5px auto 0px 15px;
+  padding: 17px 17px;
+  border: 0px;
+ }
+
+ table {
+  width: 100%;
+  border-collapse: collapse;
+  justify-content: space-between;
+  background-color: white;
+ }
+
+ table thead th {
+  color: #ffffff;
+  background: #2f4961;
+ }
+
+ .td {
+  text-align: left;
+ }
+
+ table th,
+ table td {
+  text-align: center;
+  padding: 20px;
+
+ }
+
+ table td {
+  border-right: 1px solid #f1f1f1;
+ }
+
+ table tr:nth-child(even) {
+  background: #f8f8f8;
+ }
+}
+
+.wrapper .search_box .search_field .input {
+ width: 100%;
+ height: 100%;
+ border: 0px;
+ font-size: 16px;
+ padding-left: 20px;
+ padding-right: 38px;
+ color: #6f768d;
+}
+
+.wrapper .search_box .search_field .fas {
+ position: absolute;
+ top: 13px;
+ right: 30px;
+ font-size: 22px;
+ color: #5078ef;
+ cursor: pointer;
+}
+
+
+
+@media (max-width: 720px) {
+ .default_option {
+  margin: 0px 0px 0px 0px;
+ }
+
+ .form-control {
+  height: 25px;
+  color: black;
+  font-size: 20px;
+  border-radius: 0px;
+  width: 100%;
+  margin: 5px 0px 0px 10px;
+  padding: 20px 20px;
+  border: 0px;
+ }
+
+ .search_box {
+  margin-top: 10px;
+ }
+
+ .search_field i {
+  display: none;
+ }
+
+ table {
+  width: 100vw;
+  border-collapse: collapse;
+  background-color: white;
+ }
+
+ table thead th {
+  color: #ffffff;
+  background: #2f4961;
+  padding: 0px;
+ }
+
+ table tr th {
+  padding: 20px 8px;
+ }
+
+ .td {
+  text-align: left;
+ }
+ table th,
+ table td {
+  text-align: center;
+  padding: 10px;
+ }
+
+ table td {
+  border-right: 1px solid #f1f1f1;
+ }
+
+ table tr:nth-child(even) {
+  background: #f8f8f8;
+ }
+}

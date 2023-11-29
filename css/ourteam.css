@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+* {
+ text-decoration: none;
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* Estilos para o contêiner (Page of SIS) */
+.container {
+ text-align: center;
+ /* Alinha o conteúdo ao centro horizontalmente */
+ position: relative;
+ /* Define a posição do contêiner como relativa para alinhar o texto overlay */
+ overflow: hidden;
+ /* Esconde qualquer conteúdo que ultrapasse os limites do contêiner */
+ width: 100%;
+ top: -13PX;
+ z-index: 0;
+}
+
+.text-overlay a {
+ color: white;
+}
+
+/* Estilos para a imagem */
+.container img {
+ display: block;
+ /* Define a imagem como bloco para alinhar corretamente */
+ margin: 0;
+ /* Remove a margem padrão da imagem */
+ padding: 0;
+ margin-bottom: 20px;
+ /* Adiciona margem inferior para espaçamento */
+ height: 330px;
+ /* Mantém a proporção da imagem */
+ width: 100%;
+ /* Certifica de que a imagem ocupe todo o espaço do contêiner */
+
+}
+
+/* Estilos específicos para desktop (altura fixa) usando uma media query */
+@media (max-width: 720px) {
+ .container img {
+  width: 720px;
+  height: 260px;
+  /* Define altura fixa para desktops com largura mínima de 768 pixels */
+  margin: 0;
+  padding: 0;
+ }
+}
+
+
+.text-overlay {
+ /* Texto sobreposto na imagem (Page of SIS)*/
+ position: absolute;
+ /* Define a posição do texto como absoluta para posicioná-lo sobre a imagem */
+ top: 50%;
+ /* Posiciona o texto verticalmente no meio da imagem */
+ left: 50%;
+ /* Posiciona o texto horizontalmente no meio da imagem */
+ transform: translate(-50%, -50%);
+ /* Centraliza o texto exatamente no meio da imagem */
+ background-color: rgba(255, 255, 255, 0);
+ /* Fundo transparente para melhor legibilidade do texto */
+ font: 500 45px system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+ /* Fonte do texto */
+ padding: 20px;
+ /* Espaçamento interno do texto para melhor legibilidade */
+ white-space: nowrap;
+ color: white;
+
+}
+
+@media (max-width:720px) {
+ .text-overlay {
+  font-size: 20pt;
+  font-weight: bold;
+  white-space: nowrap;
+  top: 43%;
+ }
+}
+
+
+.card2 {
+ background-color: white;
+ margin: 20px;
+ border-radius: 8px;
+ box-shadow: -10px 0px #8E24AA, 8px -8px 6px -10px #b3c6ff, 8px 8px 6px -10px #b3c6ff;
+ padding: 20px;
+ align-content: center;
+ text-align: center;
+ line-height: 1.5em;
+
+}
+@media (min-width:720px){
+ .info{
+  display: flex;
+ }
+.info .card2{
+ height: 560px;
+}
+.info2 .card2{
+ height: 350px;
+}
+.info2{
+ display: flex;
+}
+.info3 .card2{
+ height: 540px;
+}
+.info3{
+ display: flex;
+}
+}
+.photo img {
+ height: 130px;
+ width: 130px;
+ border-radius: 100%;
+ margin: auto;
+
+}
+
+.information .name {
+ font-size: 20px;
+}
+
+.social-list {
+ display: flex;
+ justify-content: center;
+ list-style: none;
+ height: 30px;
+}
+
+.social-list .fa-brands {
+ margin: 0px 10px 0 0;
+ font-size: 25px;
+ justify-content: space-around;
+ cursor: pointer;
+}
+
+.social-list .fa-brands:hover {
+ font-size: 29px;
+ transition: 0.3s;
+}
+
+ul {
+ padding: 0;
+}
+
+.fonts {
+ font-size: 16px;
+ text-align: justify;
+ line-height: 1.5em;
+ text-indent: 2em;
+}
+
+.btn {
+ height: 60px;
+ justify-content: space-between;
+}
+
+.btn button {
+ margin: 20px;
+ padding: 10px 20px;
+ background-color: white;
+ border: 1px solid #8E24AA;
+ border-radius: 6px;
+ cursor: pointer;
+ color: #8E24AA;
+ display: inline;
+}
+
+.btn button:hover {
+ background-color: #8E24AA;
+ color: white;
+ transition: 0.3s;
+}
+
+button {
+ font-weight: 500;
+ font: normal 15px 'Roboto';
+}
+
+
+.footer.logo{
+height: 0;
+ margin: 0 0;
+}
